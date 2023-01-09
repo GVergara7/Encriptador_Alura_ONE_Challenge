@@ -1,0 +1,475 @@
+/* Importando fuente Inter desde google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo 2';
+    background:#18191A;
+}
+
+/* //////////////////////////////////////////////////////////////////// NAVBAR styling //////////////////////////////////////////////////////////////*/
+.navbar{
+    background: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navbar .logo a span{
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/* //////////////////////////////////////////////////////////////////// Main styling //////////////////////////////////////////////////////////////*/
+main
+{
+    width: 1080px;
+    height: 620px;
+   padding-top: 100px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* //////////////////////////////////////////////////////////////////// DIVs Izquierda //////////////////////////////////////////////////////////////*/
+
+.divIzquierda {
+    width: 540px;
+    height: 400px;    
+    float: left;
+    background-color: #18191A;
+}
+
+
+.divIzquierda textarea{
+    width: 90%;
+    height: 70%;
+    padding-top: 20%;
+    background: none;
+    border: 0;
+    font-size: 25px;
+    font-family: 'Baloo 2';
+    color: #ffffff;
+    resize: none;
+    border-radius: 20px;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////Area del texto //////////////////////////////////////////////////////////////*/
+
+textarea::placeholder { 
+    color: #ffffff;  
+    opacity: 50%;
+    font-size: 30px;
+}
+
+textarea {
+    resize: none;
+    text-transform: lowercase;
+}
+
+textarea:focus{
+    outline: 0;
+    background-color: rgb(36, 37, 38);
+}
+
+/* ////////////////////////////////////////////////////////////////////Alerta de minusculas y numeros //////////////////////////////////////////////////////////////*/
+.divIzquierda div p img{
+    width: 15px;
+}
+.divIzquierda div p{
+    font-size: small;
+    color: #ffffff;
+    }
+
+/* //////////////////////////////////////////////////////////////////// Botones Encriptar y Desencriptar styling //////////////////////////////////////////////////////////////*/
+
+/* +++++++++++++++++++++++++Boton Encriptar +++++++++++++++++++++++++*/
+.btnEncriptar {
+    width: 250px;
+    height: 50px;
+    margin: 0 5px;
+    background: #0A3871;
+    border-radius: 15px;
+    color: #FFF;
+    border: 0;
+    font-family: 'Baloo 2';
+    font-size: large;
+    box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btnEncriptar:hover {
+    background: #26c047;
+    cursor: pointer;
+}
+
+.btnEncriptar .interiorBoton{
+    font-size: 20px;
+    margin: auto;
+}
+
+/* +++++++++++++++++++++++++++++++++Boton Desencriptar+++++++++++++++++++++++++++++++++++ */
+.btnDesencriptar {
+    width: 250px;
+    height: 50px;
+    margin: 0 5px;
+    background: #0A3871;
+    border-radius: 15px;
+    color: #FFF;
+    border: 0;
+    font-family: 'Baloo 2';
+    font-size: large;
+    box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btnDesencriptar:hover {
+    background: #e01515;
+    cursor: pointer;
+}
+
+.btnDesencriptar .interiorBoton{
+    font-size: 20px;
+    margin: auto;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++Boton Copiar+++++++++++++++++++++++++++++++++++++ */
+.btnCopiar {
+    width: 250px;
+    height: 50px;
+    background: #0A3871;
+    border-radius: 15px;
+    color: #FFF;
+    border: 0;
+    font-family: 'Baloo 2';
+    font-size: 20px;
+    box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.btnCopiar:hover {
+    background: #a732eb;
+    cursor: pointer;
+}
+
+
+/* //////////////////////////////////////////////////////////////////// DIVs Derecha //////////////////////////////////////////////////////////////*/
+
+
+.divDerecha {
+    width: 540px;
+    height: 400px;
+    padding: 100px 0 100px 0;
+    background: #242526;
+    float: left;
+    border-radius: 30px;    
+    box-shadow: -5px 5px 10px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.divDerecha p{
+    text-align: center; 
+    padding: 0 5px;
+    margin: auto;
+}
+
+.divDerecha h1{
+    text-align: center; 
+    padding: 0 5px;
+    margin: auto;
+    color: #46eee6;
+}
+
+.divDerecha .exitosa{
+    
+    font-family: 'Baloo 2';
+    font-size: 30px;
+ 
+}
+
+.textoDerecha_1 {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 120%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.textoDerecha_2 {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.divDerecha img{
+    margin: auto;
+    display: block;
+}
+
+/* //////////////////////////////////////////////////////////////////// Texto de Salida - Despues de apretar botones //////////////////////////////////////////////////////////////*/
+.textoSalida {
+    height: 235px;
+    font-family: 'Baloo 2';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: block;
+    margin:  auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* //////////////////////////////////////////////////////////////////// Footer styling //////////////////////////////////////////////////////////////*/
+
+footer {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    width: auto;
+    background: #242526;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: rgb(6, 226, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+footer span a:hover{
+    color: #46eee6;  
+}
+
+.iconos_footer {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* //////////////////////////////////////////////////////////////////// RESPONSIVE styling //////////////////////////////////////////////////////////////*/
+
+
+@media (max-width:1024px)
+{
+    main{
+        height: 800px;
+        width: 700px;
+    }
+    .divDerecha h1{
+        text-align: center; 
+        padding-top: 10px;
+        margin: auto;
+        color: #46eee6;
+
+        
+    }
+
+.textoSalida {
+    height: 100px;
+    font-family: 'Baloo 2';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: block;
+    margin:  auto;
+}
+    .divIzquierda{
+        width: 80%; 
+        height: auto; 
+        margin: 0 auto;
+        float: none; 
+    }
+    .divDerecha p{
+        text-align: center; 
+        padding: 15PX;
+        margin: auto;
+    }
+    
+    .divIzquierda textarea
+    {
+        width: 100%;
+        height: 200px;
+    }
+
+    .divDerecha {
+        width: 100%; 
+        height: 300px; 
+        padding: 0; 
+        margin: 25px 0;
+    }
+
+    .divDerecha img{
+        display: none;
+    }
+
+    .divDerecha h2{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:720px)
+{
+    main{
+        height: 850px;
+        width: 468px;
+    }
+
+    .divIzquierda{
+        width: 80%; 
+        height: auto; 
+        margin: 0 auto;
+        float: none; 
+    }
+
+    .divIzquierda textarea
+    {
+        width: 100%;
+        height: 300px;
+    }
+
+    .divDerecha {
+        width: 100%; 
+        height:300px; 
+        padding: 0; 
+        margin: 25px 0;
+    }
+    
+    #encriptarBTN, #descodificarBTN{
+        width: 100%; 
+        margin: 5px 0;
+    }
+
+
+    .btnEncriptar {
+        width: 150px;
+        height: 50px;
+        margin: 0 5px;
+        background: #0A3871;
+        border-radius: 15px;
+        color: #FFF;
+        border: 0;
+        font-family: 'Baloo 2';
+        font-size: large;
+        box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    
+    }
+
+    .btnDesencriptar {
+        width: 150px;
+        height: 50px;
+        margin: 0 5px;
+        background: #0A3871;
+        border-radius: 15px;
+        color: #FFF;
+        border: 0;
+        font-family: 'Baloo 2';
+        font-size: large;
+        box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navbar .logo a{
+        font-size: 25px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+
+@media (max-width:500px)
+{
+    main{
+        height: 750px;
+        width: 90%;
+    }
+
+    .divIzquierda{
+        width: 90%;
+        float: none; 
+        height: auto; 
+        margin: 0 auto;
+    }
+
+    .divIzquierda textarea{
+        width: 100%;
+        height: 200px;
+    }
+
+    #encriptarBTN, #descodificarBTN{
+        width: 100%; margin: 5px 0;
+    }
+
+    .navbar .logo a{
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .btnEncriptar {
+        width: 150px;
+        height: 50px;
+        margin: 0 5px;
+        background: #0A3871;
+        border-radius: 15px;
+        color: #FFF;
+        border: 0;
+        font-family: 'Baloo 2';
+        font-size: large;
+        box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    
+    }
+
+    .btnDesencriptar {
+        width: 150px;
+        height: 50px;
+        margin: 0 5px;
+        background: #0A3871;
+        border-radius: 15px;
+        color: #FFF;
+        border: 0;
+        font-family: 'Baloo 2';
+        font-size: large;
+        box-shadow: -3px 3px 6px 2px rgba(0, 0, 0, 0.2);
+    
+    }
+
+}
